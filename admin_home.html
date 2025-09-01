@@ -1,0 +1,137 @@
+<!--
+Author: W3layouts
+Author URL: http://w3layouts.com
+License: Creative Commons Attribution 3.0 Unported
+License URL: http://creativecommons.org/licenses/by/3.0/
+-->
+
+<!DOCTYPE html>
+{% load static %}
+<html lang="zxx">
+
+<head>
+	<base href="/static/ad_min/ad_min_homepage/">
+	<title>ADMIN HOMEPAGE</title>
+	<!-- Meta tag Keywords -->
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta charset="UTF-8" />
+	<meta name="keywords" content="Pool Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template, Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyEricsson, Motorola web design" />
+	<script>
+		addEventListener("load", function () {
+			setTimeout(hideURLbar, 0);
+		}, false);
+
+		function hideURLbar() {
+			window.scrollTo(0, 1);
+		}
+	</script>
+	<!-- //Meta tag Keywords -->
+
+	<!-- Custom-Files -->
+	<link rel="stylesheet" href="css/bootstrap.css">
+	<!-- Bootstrap-Core-CSS -->
+	<link rel="stylesheet" href="css/style.css" type="text/css" media="all" />
+	<!-- Style-CSS -->
+	<link href="css/font-awesome.min.css" rel="stylesheet">
+	<!-- Font-Awesome-Icons-CSS -->
+	<!-- //Custom-Files -->
+
+	<!-- Web-Fonts -->
+	<link href="//fonts.googleapis.com/css?family=Oswald:200,300,400,500,600,700" rel="stylesheet">
+	<link href="//fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i" rel="stylesheet">
+	<!-- //Web-Fonts -->
+</head>
+
+<body>
+
+	<script>
+		{% for msg in messages %}
+			alert('{{ msg }}')
+		{% endfor %}
+	</script>
+
+	<!-- main banner -->
+	<div class="main-top" id="home">
+		<!-- header -->
+		<header>
+			<div class="container-fluid">
+				<!-- nav -->
+				<nav class="py-lg-4 py-3 px-xl-5 px-lg-3 px-2">
+					<div id="logo">
+						<h1><a class="" ><span  aria-hidden="true"></span>ADMIN</a></h1>
+					</div>
+					<label for="drop" class="toggle">Menu</label>
+					<input type="checkbox" id="drop" />
+					<ul class="menu mt-2">
+						<li class="active"><a href="/adminhome/">HOME</a></li>
+						<li  class="mx-lg-3 mx-md-2 my-md-0 my-1"><a href="/requirements/">REQUIREMENTS</a></li>
+						<li class="mx-lg-3 mx-md-2 my-md-0 my-1">
+							<!-- First Tier Drop Down -->
+							<label for="drop-2" class="toggle toogle-2">Dropdown <span class="fa fa-angle-down" aria-hidden="true"></span>
+							</label>
+							<a href="/adminhome/">APPROVAL <span class="fa fa-angle-down" aria-hidden="true"></span></a>
+							<input type="checkbox" id="drop-2" />
+							<ul>
+								<li><a href="/solvoapprove/" class="drop-text">SOLVOLYSIS</a></li>
+								<li><a href="/recapprove/" class="drop-text">RECLAMATION</a></li>
+								<li><a href="/fabricapprove/" class="drop-text">FABRICATION</a></li>
+								<li><a href="/assessapprove/" class="drop-text">ASSESSMENT</a></li>
+							</ul>
+						</li>
+						<li class="mx-lg-3 mx-md-2 my-md-0 my-1">
+							<!-- First Tier Drop Down -->
+							<label for="drop-2" class="toggle toogle-2">Dropdown <span class="fa fa-angle-down" aria-hidden="true"></span>
+							</label>
+							<a href="/adminhome/">MANAGE REPORTS <span class="fa fa-angle-down" aria-hidden="true"></span></a>
+							<input type="checkbox" id="drop-2" />
+							<ul>
+								<li><a href="/solvomanage/" class="drop-text">SOLVOLYSIS</a></li>
+								<li><a href="/recmanage/" class="drop-text">RECLAMATION</a></li>
+								<li><a href="/fabricmanage/" class="drop-text">FABRICATION</a></li>
+								<li><a href="/assessmanage/" class="drop-text">ASSESSMENT</a></li>
+							</ul>
+						</li>
+						<li><a href="/managestatus/">MANAGE STATUS</a></li>
+						<li><a href="/logout/">LOGOUT</a></li>
+					</ul>
+				</nav>
+				<!-- //nav -->
+			</div>
+		</header>
+		<!-- //header -->
+
+		<!-- banner -->
+		<div class="main-w3pvt">
+			<div class="container">
+				<div class="style-banner text-center">
+					<h3 class="mb-2">Empowering Teams, Elevating Systems</h3>
+					<p>Organizing the Future, Today</p>
+				</div>
+			</div>
+		</div>
+		<!-- //banner -->
+	</div>
+	<!-- //main banner -->
+
+	<!-- about -->
+	<div class="popular-wthree py-5" id="about">
+		<div class="container py-xl-5 py-lg-3">
+			<div class="row">
+				<h3 class="col-lg-6 tittle" style="color:#e39919;">About</h3>
+				<p class="col-lg-6 mt-lg-0 mt-4" style="text-align:justify;">The role of an admin is essential for maintaining 
+					the efficiency and organization of systems or operations.
+					 They manage resources, configure systems, and oversee data, 
+					 ensuring that processes run smoothly. By handling key tasks 
+					 such as user management, security, and compliance, admins ensure 
+					 that teams can work without disruptions. Their responsibilities 
+					 also include streamlining workflows, troubleshooting issues, and 
+					 acting as a bridge between departments. With their attention to
+					  detail and strong organizational skills, admins contribute to the 
+					  overall productivity and success of an organization.</p>
+			</div>
+			
+			
+
+</body>
+
+</html>

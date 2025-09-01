@@ -1,0 +1,218 @@
+<!doctype html>
+{% load static %}
+<html lang="en">
+  <head>
+
+
+
+	<base href="/static/ad_min/ad_min_homepage/">
+	<title>manage_status</title>
+	<!-- Meta tag Keywords -->
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta charset="UTF-8" />
+	<meta name="keywords" content="Pool Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template, Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyEricsson, Motorola web design" />
+	<script>
+		addEventListener("load", function () {
+			setTimeout(hideURLbar, 0);
+		}, false);
+
+		function hideURLbar() {
+			window.scrollTo(0, 1);
+		}
+	</script>
+	<!-- //Meta tag Keywords -->
+
+	<!-- Custom-Files -->
+	<link rel="stylesheet" href="css/bootstrap.css">
+	<!-- Bootstrap-Core-CSS -->
+	<link rel="stylesheet" href="css/style.css" type="text/css" media="all" />
+	<!-- Style-CSS -->
+	<link href="css/font-awesome.min.css" rel="stylesheet">
+	<!-- Font-Awesome-Icons-CSS -->
+	<!-- //Custom-Files -->
+
+	<!-- Web-Fonts -->
+	<link href="//fonts.googleapis.com/css?family=Oswald:200,300,400,500,600,700" rel="stylesheet">
+	<link href="//fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i" rel="stylesheet">
+	<!-- //Web-Fonts -->
+
+
+
+
+
+
+
+
+	<base href="/static/ad_min/all_approve_table/">
+  	<title>Table</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+	<link href='https://fonts.googleapis.com/css?family=Roboto:400,100,300,700' rel='stylesheet' type='text/css'>
+
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+	
+	<link rel="stylesheet" href="{% static 'ad_min/manage_status/css/style.css' %}">
+
+	</head>
+
+
+	<body>
+
+		<script>
+			{% for msg in messages %}
+				alert('{{ msg }}')
+			{% endfor %}
+		</script>
+
+
+
+
+<!-- main banner -->
+<div class="main-top" id="home">
+	<!-- header -->
+	<header>
+		<div class="container-fluid">
+			<!-- nav -->
+			<nav class="py-lg-4 py-3 px-xl-5 px-lg-3 px-2">
+				<div id="logo">
+					<h1><a ><span aria-hidden="true"></span>ADMIN</a></h1>
+				</div>
+				<label for="drop" class="toggle">Menu</label>
+				<input type="checkbox" id="drop" />
+				<ul class="menu mt-2">
+					<li ><a href="/adminhome/">HOME</a></li>
+					<li><a href="/requirements/">REQUIREMENTS</a></li>
+					<li class="mx-lg-3 mx-md-2 my-md-0 my-1">
+						<!-- First Tier Drop Down -->
+						<label for="drop-2" class="toggle toogle-2">Dropdown <span class="fa fa-angle-down" aria-hidden="true"></span>
+						</label>
+						<a href="#"  onclick="event.preventDefault();">APPROVAL <span class="fa fa-angle-down" aria-hidden="true"></span></a>
+						<input type="checkbox" id="drop-2" />
+						<ul>
+							<li><a href="/solvoapprove/" class="drop-text">SOLVOLYSIS</a></li>
+							<li><a href="/recapprove/" class="drop-text">RECLAMATION</a></li>
+							<li><a href="/fabricapprove/" class="drop-text">FABRICATION</a></li>
+							<li><a href="/assessapprove/" class="drop-text">ASSESSMENT</a></li>
+						</ul>
+					</li>
+					<li class="mx-lg-3 mx-md-2 my-md-0 my-1">
+						<!-- First Tier Drop Down -->
+						<label for="drop-2" class="toggle toogle-2">Dropdown <span class="fa fa-angle-down" aria-hidden="true"></span>
+						</label>
+						<a href="#" onclick="event.preventDefault();">MANAGE REPORTS <span class="fa fa-angle-down" aria-hidden="true"></span></a>
+						<input type="checkbox" id="drop-2" />
+						<ul>
+							<li ><a href="/solvomanage/" class="drop-text" >SOLVOLYSIS</a></li>
+								<li><a href="/recmanage/" class="drop-text">RECLAMATION</a></li>
+								<li><a href="/fabricmanage/" class="drop-text">FABRICATION</a></li>
+								<li><a href="/assessmanage/" class="drop-text">ASSESSMENT</a></li>
+							</ul>
+						</li>
+						<li class="active"><a href="/managestatus/" >MANAGE STATUS</a></li>
+						<li class="mx-lg-3 mx-md-2 my-md-0 my-1"><a href="/logout/">LOGOUT</a></li>
+				</ul>
+			</nav>
+			<!-- //nav -->
+		</div>
+	</header>
+	<!-- //header -->
+
+
+<!-- banner -->
+<div class="main-w3pvt">
+	<div class="container">
+		<section class="ftco-section">
+			<div class="container">
+				<div class="row justify-content-center">
+					<div class="col-md-6 text-center mb-5">
+						<h2 class="heading-section" style="color:white;font-size:40px;">MANAGE STATUS</h2>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-md-12">
+						<div class="table-wrap">
+							<table class="table">
+							  <thead class="thead-primary">
+								
+								<th style="text-align:center;">PROJECT ID</th>
+								<th style="text-align:center;">BLADE LENGTH</th>
+								<th style="text-align:center;">BLADE WIDTH</th>
+								<th style="text-align:center;">BLADE WEIGHT</th>
+								<th style="text-align:center;">BLADE CIRCUMFERENCE</th>
+								<th colspan="2" style="text-align:center;">ACTION</th>
+										</tr>
+									</thead>
+									<tbody>
+										{% for i in data %}
+										<tr>
+															<td style="text-align:center;">{{ i.project_id }}</td>
+															<td style="text-align:center;">{{ i.blade_length }}</td>
+															<td style="text-align:center;">{{ i.blade_width }}</td>
+															<td style="text-align:center;">{{ i.blade_weight }}</td>
+															<td style="text-align:center;">{{ i.blade_circumference }}</td>
+	
+	
+	
+													{% if not i.assess_scanned %}
+														<td>{{ i.status }}</td>
+													{% endif %}
+	
+													{% if i.rep %}
+														<td>
+															<button class="fancy-button" onclick="location.href='/final_report/{{ i.project_id }}/'">Generate Report</button>
+														</td>
+													{% endif %}
+
+													{% if i.report %}
+														<td>
+															<button class="fancy-button" onclick="window.open('{{ i.f_report.url }}', '_blank')">View Report</button>
+														</td>
+													{% endif %}
+	
+	
+										</tr>
+										{% endfor %}
+							  </tbody>
+							</table>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+	</div>
+</div>
+<!-- //banner -->
+</div>
+<!-- //main banner -->
+
+<style>
+.fancy-button {
+    background-color: #e39919; /* Button background color */
+    color: white; /* Text color */
+    border: none; /* Remove border */
+    padding: 3px 7px; /* Padding for top/bottom and left/right */
+    font-size: 16px; /* Font size */
+    cursor: pointer; /* Change cursor to pointer on hover */
+    border-radius: 5px; /* Rounded corners */
+    transition: background-color 0.3s ease; /* Smooth transition for hover effect */
+    outline: none; /* Remove default focus outline */
+}
+
+.fancy-button:hover {
+    background-color: #d68a14; /* Darker shade on hover */
+}
+</style>
+
+
+
+	
+
+	<script src="{% static 'ad_min/manage_status/js/jquery.min.js' %}"></script>
+  <script src="{% static 'ad_min/manage_status/js/popper.js' %}"></script>
+  <script src="{% static 'ad_min/manage_status/js/bootstrap.min.js' %}"></script>
+  <script src="{% static 'ad_min/manage_status/js/main.js' %}"></script>
+
+	</body>
+</html>
+

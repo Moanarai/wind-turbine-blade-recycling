@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+{% load static %}
+<html>
+
+<head>
+	<base href="/static/ad_min/admin_login/">
+	<title>Admin_login_page</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="keywords" content=" Master  Login Form Widget Tab Form,Login Forms,Sign up Forms,Registration Forms,News letter Forms,Elements"/>
+	<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+	<link href="css/style.css" rel="stylesheet" type="text/css" media="all" />
+	<link href="//fonts.googleapis.com/css?family=Cormorant+SC:300,400,500,600,700" rel="stylesheet">
+	<link href="//fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i" rel="stylesheet">
+	
+	<!-- Styling for the eye icon -->
+	<style>
+		.eye-icon {
+			position: absolute;
+			right: 10px;
+			top: 50%;
+			transform: translateY(-50%);
+			cursor: pointer;
+			font-size: 18px;
+			padding: 5px;
+			border-radius: 50%; /* Circular shape for the icon */
+			color: white; /* White color for the eye icon */
+			background-color: transparent; /* Transparent background */
+		}
+
+		.eye-icon::before {
+			content: '\1F441'; /* Unicode for eye symbol */
+		}
+
+		.eye-icon.show::before {
+			content: '\1F576'; /* Unicode for crossed eye symbol (show password) */
+		}
+	</style>
+</head>
+
+<body>
+
+	<script>
+		{% for msg in messages %}
+			alert('{{ msg }}')
+		{% endfor %}
+	</script>
+
+	<div class="padding-all">
+		<div class="header">
+			<h1>ADMIN LOGIN</h1>
+		</div>
+
+		<div class="design-w3l">
+			<div class="mail-form-agile">
+				<form action="/adminlogin/" method="POST">
+					{% csrf_token %}
+					<input type="text" name="email" placeholder="Admin ID" required=""/ autocomplete="off">
+					<div style="position:relative;">
+						<input type="password" id="password-field" name="password" class="padding" placeholder="Password" required=""/>
+						<span id="toggle-password" class="eye-icon" onclick="togglePassword()"></span>
+					</div>
+					<input type="submit" value="LOGIN">	
+				</form>
+			</div>
+
+			<div class="mail-form-agile" style="margin-top:-60px;">
+				<form action="/" method="POST">
+					{% csrf_token %}
+					<input type="submit" value="BACK">
+				</form>
+			</div>
+
+			<div class="clear"> </div>
+		</div>
+	</div>
+
+	<!-- Script to toggle password visibility -->
+	<script>
+		function togglePassword() {
+			var passwordField = document.getElementById("password-field");
+			var toggleIcon = document.getElementById("toggle-password");
+			if (passwordField.type === "password") {
+				passwordField.type = "text";
+				toggleIcon.classList.add('show');
+			} else {
+				passwordField.type = "password";
+				toggleIcon.classList.remove('show');
+			}
+		}
+	</script>
+
+</body>
+</html>

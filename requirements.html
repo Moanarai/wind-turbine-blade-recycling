@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+
+<head>
+
+    <base href="/static/ad_min/ad_min_homepage/">
+	<title>REQUIREMENTS</title>
+	<!-- Meta tag Keywords -->
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta charset="UTF-8" />
+	<meta name="keywords" content="Pool Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template, Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyEricsson, Motorola web design" />
+	<script>
+		addEventListener("load", function () {
+			setTimeout(hideURLbar, 0);
+		}, false);
+
+		function hideURLbar() {
+			window.scrollTo(0, 1);
+		}
+	</script>
+	<!-- //Meta tag Keywords -->
+
+	<!-- Custom-Files -->
+	<link rel="stylesheet" href="css/bootstrap.css">
+	<!-- Bootstrap-Core-CSS -->
+	<link rel="stylesheet" href="css/style.css" type="text/css" media="all" />
+	<!-- Style-CSS -->
+	<link href="css/font-awesome.min.css" rel="stylesheet">
+	<!-- Font-Awesome-Icons-CSS -->
+	<!-- //Custom-Files -->
+
+	<!-- Web-Fonts -->
+	<link href="//fonts.googleapis.com/css?family=Oswald:200,300,400,500,600,700" rel="stylesheet">
+	<link href="//fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i" rel="stylesheet">
+	<!-- //Web-Fonts -->
+
+
+
+
+
+
+    <!-- Required meta tags-->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Colorlib Templates">
+    <meta name="author" content="Colorlib">
+    <meta name="keywords" content="Colorlib Templates">
+
+    <!-- Title Page-->
+    <title>Au Register Forms by Colorlib</title>
+
+    <!-- Icons font CSS-->
+    <link href="{%static 'ad_min/requirement/vendor/mdi-font/css/material-design-iconic-font.min.css' %}" rel="stylesheet" media="all">
+    <link href="{%static 'ad_min/requirement/vendor/font-awesome-4.7/css/font-awesome.min.css' %}" rel="stylesheet" media="all">
+    <!-- Font special for pages-->
+    <link href="https://fonts.googleapis.com/css?family=Poppins:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
+
+    <!-- Vendor CSS-->
+    <link href="{%static 'ad_min/requirement/vendor/select2/select2.min.css' %}" rel="stylesheet" media="all">
+    <link href="{%static 'ad_min/requirement/vendor/datepicker/daterangepicker.css' %}" rel="stylesheet" media="all">
+
+    <!-- Main CSS-->
+    <link href="{% static 'ad_min/requirement/css/main.css' %}" rel="stylesheet" media="all">
+</head>
+
+<body>
+
+    <script>
+		{% for msg in messages %}
+			alert('{{ msg }}')
+		{% endfor %}
+	</script>
+
+
+
+
+	<!-- main banner -->
+	<div class="main-top" id="home">
+		<!-- header -->
+		<header>
+			<div class="container-fluid">
+				<!-- nav -->
+				<nav class="py-lg-4 py-3 px-xl-5 px-lg-3 px-2">
+					<div id="logo">
+						<h1><a ><span aria-hidden="true"></span>ADMIN</a></h1>
+					</div>
+					<label for="drop" class="toggle">Menu</label>
+					<input type="checkbox" id="drop" />
+					<ul class="menu mt-2">
+						<li class="mx-lg-3 mx-md-2 my-md-0 my-1"><a href="/adminhome/">HOME</a></li>
+						<li class="active" ><a href="/requirements/">REQUIREMENTS</a></li>
+						<li class="mx-lg-3 mx-md-2 my-md-0 my-1">
+							<!-- First Tier Drop Down -->
+							<label for="drop-2" class="toggle toogle-2">Dropdown <span class="fa fa-angle-down" aria-hidden="true"></span>
+							</label>
+							<a href="#"  onclick="event.preventDefault();">APPROVAL <span class="fa fa-angle-down" aria-hidden="true"></span></a>
+							<input type="checkbox" id="drop-2" />
+							<ul>
+								<li><a href="/solvoapprove/" class="drop-text">SOLVOLYSIS</a></li>
+								<li><a href="/recapprove/" class="drop-text">RECLAMATION</a></li>
+								<li><a href="/fabricapprove/" class="drop-text">FABRICATION</a></li>
+								<li><a href="/assessapprove/" class="drop-text">ASSESSMENT</a></li>
+							</ul>
+						</li>
+						<li class="mx-lg-3 mx-md-2 my-md-0 my-1">
+							<!-- First Tier Drop Down -->
+							<label for="drop-2" class="toggle toogle-2">Dropdown <span class="fa fa-angle-down" aria-hidden="true"></span>
+							</label>
+							<a href="#" onclick="event.preventDefault();">MANAGE REPORTS <span class="fa fa-angle-down" aria-hidden="true"></span></a>
+							<input type="checkbox" id="drop-2" />
+							<ul>
+								<li ><a href="/solvomanage/" class="drop-text" >SOLVOLYSIS</a></li>
+								<li><a href="/recmanage/" class="drop-text">RECLAMATION</a></li>
+								<li><a href="/fabricmanage/" class="drop-text">FABRICATION</a></li>
+								<li><a href="/assessmanage/" class="drop-text">ASSESSMENT</a></li>
+							</ul>
+						</li>
+						<li><a href="/managestatus/">MANAGE STATUS</a></li>
+						<li><a href="/logout/">LOGOUT</a></li>
+					</ul>
+				</nav>
+				<!-- //nav -->
+			</div>
+		</header>
+		<!-- //header -->
+
+
+
+
+
+
+
+    <div class="page-wrapper bg-gra-01 p-t-180 p-b-100 font-poppins" style="margin-top:-160px;">
+        <div class="wrapper wrapper--w780">
+            <div class="card card-3">
+                <div class="card-heading"></div>
+                <div class="card-body">
+                    <h2 class="title">REQUIREMENTS</h2>
+                    <form action="/requirements/" method="POST">
+                        {% csrf_token %}
+                        <div class="input-group">
+                            <input class="input--style-3" type="number" placeholder=" Blade Length (m)" name="length" min="15" max="100" step="1" required>
+                        </div>
+                        <div class="input-group">
+                            <input class="input--style-3" type="number" placeholder=" Blade Width (m)" name="width" min="2" max="5" step="1" required>
+                        </div>
+                        <div class="input-group">
+                            <input class="input--style-3" type="number" placeholder=" Blade Weight (tons)" name="weight" min="2" max="30" step="1" required>
+                        </div>
+                        <div class="input-group">
+                            <input class="input--style-3" type="number" placeholder=" Blade Circumference (m)" name="circumference" min="6.3" max="15.3" step="1" required>
+                        </div>
+                        <div class="p-t-10">
+                            <button class="btn btn--pill btn--green" type="submit">UPLOAD</button>
+                            <!-- Back Button -->
+                            <button class="btn btn--pill btn--green" type="button" onclick="goBack()">BACK</button>
+                        </div>
+                        
+                        
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function goBack() {
+            window.location.href = "/adminhome/";
+        }
+    </script>
+
+    <!-- Jquery JS-->
+    <script src="{%static 'ad_min/requirement/vendor/jquery/jquery.min.js' %}"></script>
+    <!-- Vendor JS-->
+    <script src="{%static 'ad_min/requirement/vendor/select2/select2.min.js' %}"></script>
+    <script src="{%static 'ad_min/requirement/vendor/datepicker/moment.min.js' %}"></script>
+    <script src="{%static 'ad_min/requirement/vendor/datepicker/daterangepicker.js' %}"></script>
+
+    <!-- Main JS-->
+    <script src="{%static 'ad_min/requirement/js/global.js' %}"></script>
+
+    <script>
+        // Custom validation for turbine blade fields
+        function validateForm() {
+            var length = document.getElementsByName('length')[0].value;
+            var width = document.getElementsByName('width')[0].value;
+            var weight = document.getElementsByName('weight')[0].value;
+            var circumference = document.getElementsByName('circumference')[0].value;
+    
+            if (length < 15 || length > 100) {
+                alert("Please enter a valid length between 15 and 100 meters.");
+                return false;
+            }
+            if (width < 2 || width > 5) {
+                alert("Please enter a valid width between 2 and 5 meters.");
+                return false;
+            }
+            if (weight < 2 || weight > 30) {
+                alert("Please enter a valid weight between 2 and 30 tons.");
+                return false;
+            }
+            if (circumference < 6.3 || circumference > 15.3) {
+                alert("Please enter a valid circumference between 6.3 and 15.3 meters.");
+                return false;
+            }
+            return true;
+        }
+    </script>
+
+    <script>
+        .p-t-10 button {
+    display: inline-block;
+    margin-right: 10px; /* Optional: Adds some space between buttons */
+}
+.p-t-10 {
+    display: flex;
+    gap: 10px; /* Optional: Adds space between buttons */
+}
+
+.menu {
+    position: absolute; /* Ensure the menu is positioned relative */
+    z-index: 1000; /* Bring the dropdown above other content */
+}
+
+    </script>
+
+</body><!-- This templates was made by Colorlib (https://colorlib.com) -->
+
+</html>
+<!-- end document-->
