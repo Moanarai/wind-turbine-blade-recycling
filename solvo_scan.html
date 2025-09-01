@@ -1,0 +1,212 @@
+<!doctype html>
+{% load static %}
+<html lang="en">
+
+  <head>
+
+
+
+	<base href="/static/solvolysis/solvo_homepage/">
+
+	<title>Solvo_scan</title>
+	<!-- Meta tag Keywords -->
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta charset="UTF-8" />
+	<meta name="keywords" content="Befit Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template, Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyEricsson, Motorola web design" />
+	<script>
+		addEventListener("load", function () {
+			setTimeout(hideURLbar, 0);
+		}, false);
+
+		function hideURLbar() {
+			window.scrollTo(0, 1);
+		}
+	</script>
+	<!-- //Meta tag Keywords -->
+
+	<!-- Custom-Files -->
+	<link rel="stylesheet" href="css/bootstrap.css">
+	<!-- Bootstrap-Core-CSS -->
+	<link href="css/css_slider.css" type="text/css" rel="stylesheet" media="all">
+	<!-- banner slider -->
+	<link rel="stylesheet" href="css/style.css" type="text/css" media="all" />
+	<!-- Style-CSS -->
+	<link href="css/font-awesome.min.css" rel="stylesheet">
+	<!-- Font-Awesome-Icons-CSS -->
+	<!-- //Custom-Files -->
+
+	<!-- Web-Fonts -->
+	<link href="//fonts.googleapis.com/css?family=Nunito+Sans:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i&amp;subset=latin-ext,vietnamese"
+	 rel="stylesheet">
+	<link href="//fonts.googleapis.com/css?family=Roboto+Condensed:300,300i,400,400i,700,700i&amp;subset=cyrillic,cyrillic-ext,greek,greek-ext,latin-ext,vietnamese"
+	 rel="stylesheet">
+	<!-- //Web-Fonts -->
+
+
+
+
+	
+  	<title>solvo_protocols_table</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+	<link href='https://fonts.googleapis.com/css?family=Roboto:400,100,300,700' rel='stylesheet' type='text/css'>
+
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+	
+	<link rel="stylesheet" href="{% static 'solvolysis/solvo_scan/css/style.css' %}">
+
+	</head>
+
+
+	<body>
+
+		<script>
+			{% for msg in messages %}
+				alert('{{ msg }}')
+			{% endfor %}
+		</script>
+
+
+<!-- main banner -->
+<div class="main-top" id="home">
+	<!-- header -->
+	<header>
+		<div class="container-fluid">
+			<div class="header d-md-flex justify-content-between align-items-center py-3 px-xl-5 px-lg-3 px-2">
+				<!-- logo -->
+				<div id="logo">
+					<h1><a class="" href="/solvo_home/">SOLVOLYSIS</a></h1>
+				</div>
+				<!-- //logo -->
+
+				<!-- nav -->
+				<div class="nav_w3ls">
+					<nav>
+						<label for="drop" class="toggle">Menu</label>
+						<input type="checkbox" id="drop" />
+						<ul class="menu">
+							<li><a href="/solvo_home/" >HOME</a></li>
+							<li class="mx-lg-4 mx-md-3 my-md-0 my-2"><a href="/ad_min_protocols/">CRITERIA</a></li>
+							<li class="mx-lg-4 mx-md-3 my-md-0 my-2"><a href="/solvo_scan/" class="active">SOLVO SCAN</a></li>
+							<li class="mx-lg-4 mx-md-3 my-md-0 my-2"><a href="/solvo_file/">SOLVO FILE</a></li>
+							<li><a href="/solvo_logout/">LOGOUT</a></li>
+						</ul>
+					</nav>
+				</div>
+				<!-- //nav -->
+			</div>
+		</div>
+	</header>
+	<!-- //header -->
+
+	<!-- banner -->
+	<div class="banner_w3lspvt">
+		<div class="csslider infinity" id="slider1">
+			<input type="radio" name="slides" checked="checked" id="slides_1" />
+			<input type="radio" name="slides" id="slides_2" />
+			<input type="radio" name="slides" id="slides_3" />
+			<input type="radio" name="slides" id="slides_4" />
+			<ul class="banner_slide_bg">
+				<li>
+					<div class="container">
+						<div class="w3ls_banner_txt text-right ml-auto pr-xl-0 pr-sm-4 pr-5">
+							<section class="ftco-section">
+								<div class="container">
+									<div class="row justify-content-center">
+										<div class="col-md-6 text-center mb-5" style="margin-top:-200px;">
+											<h2 class="heading-section" style="color:white;font-size:40px;">SOLVOLYSIS SCANNING</h2>
+										</div>
+									</div>
+									<div class="row" style="margin-top:-100px;">
+										<div class="col-md-12">
+											<div class="table-wrap">
+												<table class="table">
+												  <thead class="thead-primary">
+													<tr>
+														<th style="text-align:center;">PROJECT ID</th>
+														<th style="text-align:center;">BLADE LENGTH</th>
+														<th style="text-align:center;">BLADE WIDTH</th>
+														<th style="text-align:center;">BLADE WEIGHT</th>
+														<th style="text-align:center;">BLADE CIRCUMFERENCE</th>
+														<th style="text-align:center;">ACTION</th>
+													</tr>
+												  </thead>
+												  <tbody>
+													{% for item in data %}
+														<tr>
+															<td style="text-align:center;">{{ item.project_id }}</td>
+															<td style="text-align:center;">{{ item.blade_length }}</td>
+															<td style="text-align:center;">{{ item.blade_width }}</td>
+															<td style="text-align:center;">{{ item.blade_weight }}</td>
+															<td style="text-align:center;">{{ item.blade_circumference }}</td>
+															<td>
+																{% if item.solvo_scanned %}
+																	<p style="color:black;"><strong>SCANNED</strong></p>
+																{% else %}
+																	<a href="/solvo_calculation/{{ item.project_id }}/">
+																		<button class="fancy-button" role="button"><strong>SCAN</strong></button>
+																	</a>
+																{% endif %}
+															</td>
+														</tr>
+														{% endfor %}
+												   
+												  </tbody>
+												</table>
+											</div>
+										</div>
+									</div>
+								</div>
+							</section>
+							
+							
+						</div>
+					</div>
+				</li>
+			
+			<div class="arrows">
+				<label for="slides_1"></label>
+				
+			</div>
+			<div class="navigation">
+				<div>
+					<label for="slides_1"></label>
+					
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- //banner -->
+</div>
+<!-- //main banner -->
+
+<style>
+	/* Styles for the buttons */
+	.fancy-button {
+		background-color: #5579db; /* Button background color */
+		color: white; /* Text color */
+		border: none; /* Remove border */
+		padding: 5px 10px; /* Padding for top/bottom and left/right */
+		font-size: 16px; /* Font size */
+		cursor: pointer; /* Change cursor to pointer on hover */
+		border-radius: 5px; /* Rounded corners */
+		transition: background-color 0.3s ease; /* Smooth transition for hover effect */
+	}
+
+	.fancy-button:hover {
+		background-color: #4165b3; /* Darker shade on hover */
+	}
+</style>
+
+
+	
+
+	<script src="{% static 'solvolysis/solvo_scan/js/jquery.min.js' %}"></script>
+  <script src="{% static 'solvolysis/solvo_scan/js/popper.js' %}"></script>
+  <script src="{% static 'solvolysis/solvo_scan/js/bootstrap.min.js' %}"></script>
+  <script src="{% static 'solvolysis/solvo_scan/js/main.js' %}"></script>
+
+	</body>
+</html>
+

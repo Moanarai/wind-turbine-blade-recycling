@@ -1,0 +1,165 @@
+
+<!DOCTYPE HTML>
+{% load static %}
+<html>
+<head>
+
+<base href="/static/homepage/">
+
+<title>HOMEPAGE</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="keywords" content="Euphony Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template, 
+Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony Ericsson, Motorola web design" />
+<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+<!-- font files -->
+<link href='//fonts.googleapis.com/css?family=Raleway:400,100,200,300,400,500,600,700,800,900' rel='stylesheet' type='text/css'>
+<link href='//fonts.googleapis.com/css?family=Audiowide' rel='stylesheet' type='text/css'>
+<!-- /font files -->
+<!-- css files -->
+<link href="css/bootstrap.min.css" rel="stylesheet" type="text/css" media="all" />
+<link href="css/font-awesome.min.css" rel="stylesheet" type="text/css" media="all" />
+<link href="css/jQuery.lightninBox.css" rel="stylesheet" type="text/css" media="all" />
+<link href="css/team.css" rel="stylesheet" type="text/css" media="all" />
+<link href="css/style.css" rel="stylesheet" type="text/css" media="all" />
+<!-- /css files -->
+<!-- js files -->
+<script src="js/modernizr.custom.js"></script>
+<!-- /js files -->
+
+</head>
+
+
+
+<body>
+	<script>
+		{% for msg in messages %}
+			alert('{{ msg }}')
+		{% endfor %}
+	</script>
+
+<!-- banner section -->
+<section class="banner">
+	<div class="container-fluid">
+	<div class="navbar-wrapper">
+		<div class="container">
+			<nav class="navbar navbar-inverse navbar-static-top cl-effect-7">
+				<div class="container">
+					<div class="navbar-header">
+						<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+							<span class="sr-only">Toggle navigation</span>
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+						</button>
+						<a class="navbar-brand" style="margin-top:220px;margin-right:170px;">
+							<h1 style="font-weight:800;font-size:60px;">
+								Life Cycle Impact of <br>Bio Resins<br> in Wind Turbines 
+								
+							</h1>
+						</a>
+					</div>
+					<div id="navbar" class="navbar-collapse collapse" style="margin-left: 90px;">
+						<ul class="nav navbar-nav">
+							<li class="active"><a href="/">Home</a></li>
+							<li><a href="/adminlogin/">ADMIN</a></li>
+							<li><a href="/solvo_register/">SOLVOLYSIS</a></li>
+							<li><a href="/rec_register/">RECLAMATION</a></li>
+							<li><a href="/fabric_register/">FABRICATION</a></li>
+							<li><a href="/assess_register/">ASSESSMENT</a></li>
+						</ul>
+					</div>	
+					
+				</div>
+			</nav>
+		</div>
+    </div>
+	<div id="boot_slider">
+		<div class="col-xs-12 col-lg-12" id="slider_full">
+			<div class="container">
+				
+			</div>	
+			<div class="col-xs-12 col-lg-12" id="slider_full_items">
+				<div class="col-xs-12 col-lg-12 slider_full_item">
+					<div class="opacity"></div>
+					<div class="img_large" style="background-image:url('images/home.jpg'); background-position:center; background-repeat:no-repeat; background-sixe">
+						<div class="container">
+							
+						</div>
+					</div>
+				</div>
+				
+			</div>
+			
+		</div>
+	</div>
+	</div>
+</section>
+<!-- /banner section -->	
+<!-- about section -->
+<section class="about" id="about">
+	<div class="container">
+		<h2 class="text-center">About Us</h2>
+		<p class="text-center" style="color:#5e5c5c;text-align:justify;">The life cycle impact of bio resins in wind turbines
+			 focuses on the environmental benefits and challenges associated 
+			 with using plant-based resins instead of conventional petrochemical-based ones.
+			  Bio resins reduce the carbon footprint during manufacturing by utilizing renewable resources,
+			   contributing to a more sustainable wind energy system. </p>
+		
+<!-- /footer section -->
+<a href="#0" class="cd-top">Top</a>
+<!-- js files -->
+<script src="js/jquery.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/SmoothScroll.min.js"></script>
+<script>
+$(document).ready(function(){
+  // Add smooth scrolling to all links in navbar + footer link
+  $(".navbar a").on('click', function(event) {
+
+   // Make sure this.hash has a value before overriding default behavior
+  if (this.hash !== "") {
+
+    // Store hash
+    var hash = this.hash;
+
+    // Using jQuery's animate() method to add smooth page scroll
+    // The optional number (900) specifies the number of milliseconds it takes to scroll to the specified area
+    $('html, body').animate({
+      scrollTop: $(hash).offset().top
+    }, 900, function(){
+
+      // Add hash (#) to URL when done scrolling (default click behavior)
+      window.location.hash = hash;
+      });
+    } // End if
+  });
+})
+</script>
+<!-- back to top -->
+<script src="js/main.js"></script> 
+<!-- /back to top -->
+<!-- js for work section -->
+<script src="js/jQuery.lightninBox.js"></script>
+<script type="text/javascript">
+	$(".lightninBox").lightninBox();
+</script>
+<!-- /js for work section -->
+<!-- js for tabs -->
+<script src="js/cbpFWTabs.js"></script>
+<script>
+	(function() {
+
+				[].slice.call( document.querySelectorAll( '.tabs' ) ).forEach( function( el ) {
+					new CBPFWTabs( el );
+				});
+
+	})();
+</script>
+<!-- /js for tabs -->
+<!-- js files for banner -->
+<script src="js/boot_slider.js" type="text/javascript"></script>
+<!-- /js files for banner -->
+<!-- /js files -->
+</body>
+</html>
