@@ -1,0 +1,248 @@
+<!doctype html>
+{% load static %}
+<html lang="en">
+  <head>
+
+
+	<base href="/static/assessment/assess_homepage/">
+	<title>assess_scanning</title>
+<!-- custom-theme -->
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="keywords" content="Symphony Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template, 
+Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyEricsson, Motorola web design" />
+<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false);
+		function hideURLbar(){ window.scrollTo(0,1); } </script>
+<!-- //custom-theme -->
+<link href="css/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
+<link href="css/style.css" rel="stylesheet" type="text/css" media="all" />
+<!-- js -->
+<script type="text/javascript" src="js/jquery-2.1.4.min.js"></script>
+<!-- //js -->
+<!-- font-awesome-icons -->
+<link href="css/font-awesome.css" rel="stylesheet"> 
+<!-- //font-awesome-icons -->
+<link href="//fonts.googleapis.com/css?family=Sofia" rel="stylesheet">
+<link href="//fonts.googleapis.com/css?family=Prompt:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i&amp;subset=latin-ext,thai,vietnamese" rel="stylesheet"></head>
+	
+
+
+
+
+
+
+
+  	<title>Table 01</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+	<link href='https://fonts.googleapis.com/css?family=Roboto:400,100,300,700' rel='stylesheet' type='text/css'>
+
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+	
+
+
+	</head>
+
+
+	<body>
+
+
+		<script>
+			{% for msg in messages %}
+				alert('{{ msg }}')
+			{% endfor %}
+		</script>
+
+
+
+
+<!-- banner -->
+<div class="banner">
+	<div class="container">
+		<nav class="navbar navbar-default">
+			<div class="navbar-header navbar-left">
+				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+					<span class="sr-only">Toggle navigation</span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+				<h1><a class="navbar-brand"  style="font-size:60px;">Assessment<span></span></a></h1>
+			</div>
+			<!-- Collect the nav links, forms, and other content for toggling -->
+			<div class="collapse navbar-collapse navbar-right" id="bs-example-navbar-collapse-1">
+				<nav class="menu menu--iris">
+					<ul class="nav navbar-nav menu__list">
+						<li class="menu__item "><a href="/assess_home/" class="menu__link">HOME</a></li>
+						<li class="menu__item"><a href="/fabric_final_report/" class="menu__link">FABRIC REPORT</a></li>
+						<li class="menu__item menu__item--current "><a href="/assess_scan/" class="menu__link">ASSESS SCAN</a></li>
+						<li class="menu__item"><a href="/assess_file/" class="menu__link">ASSESS FILE</a></li>
+						<li class="menu__item"><a href="/assess_logout/" class="menu__link">LOGOUT</a></li>
+					</ul>
+				</nav>
+			</div>
+		</nav>
+		<div class="agile_banner_info" ></div>
+			<div class="agile_banner_info_pos" style="margin-top:90px;margin-left:-100;">
+				<section class="ftco-section">
+					<div class="container">
+						<div class="row justify-content-center">
+							<div class="col-md-6 text-center mb-5">
+								<h2 class="heading-section" style="color:white; font-size:35px; margin-right:-250px; font-family: sans-serif; white-space: nowrap;">ASSESSMENT SCANNING</h2>
+								<br>
+								<br>
+							</div>
+						</div>
+						<div class="row" >
+							<div class="col-md-12">
+								<div class="table-wrap" >
+									<table class="table" style="margin-left: -150px;">
+									  <thead class="thead-primary" style="background-color: #fffd00;">
+										<th style="text-align:center;color:black;">PROJECT ID</th>
+											<th style="text-align:center;color:black;">CARBON FIBRE(Kg)</th>
+											<th style="text-align:center;color:black;">FIBRE GLASS(Kg)</th>
+											
+											<th style="text-align:center;color:black;">BALSA WOOD(Kg)</th>
+											<th style="text-align:center;color:black;">PET FOAM(Kg)</th>
+											<th style="text-align:center;color:black;">FLAX FIBRE(Kg)</th>
+											<th style="text-align:center;color:black;">BASALT FIBRE(Kg)</th>
+											<th style="text-align:center;color:black;">PECAN RESIN(Kg)</th>
+																	<th style="text-align:center;color:black;">ACTION</th>
+																</tr>
+															  </thead>
+															  <tbody style="background-color: white;">
+																{% for item in data %}
+																	<tr>
+																		<td style="text-align:center;color:black;">{{ item.project_id }}</td>
+																		<td style="text-align:center;color:black;">{{ item.c_carbon_fibre }}</td>
+																		<td style="text-align:center;color:black;">{{ item.f_fibre_glass }}</td>
+																		<td style="text-align:center;color:black;">{{ item.b_balsa_wood }}</td>
+																		<td style="text-align:center;color:black;">{{ item.pet_foam }}</td>
+																		<td style="text-align:center;color:black;">{{ item.flax_fibre }}</td>
+																		<td style="text-align:center;color:black;">{{ item.basalt_fibre }}</td>
+																		<td style="text-align:center;color:black;">{{ item.pecan_resin }}</td>
+																		<td>
+																			{% if item.assess_scanned %}
+																				<p style="color:black;">SCANNED</p>
+																			{% else %}
+																				<a href="/assess_calculation/{{ item.project_id }}/">
+																					<button class="scan-btn">SCAN</button>
+																				</a>
+																			{% endif %}
+																		</td>
+																	</tr>
+																{% endfor %}
+									  </tbody>
+									</table>
+								</div>
+							</div>
+						</div>
+					</div>
+				</section>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- //banner -->	
+
+<!-- //banner-bottom -->
+
+<!-- //about -->
+<style>
+
+
+.scan-btn {
+    background-color: #e9e905; /* Default background */
+    color: black; /* Text color */
+    border: none; /* Remove default border */
+    padding: 5px 10px; /* Make the button small */
+    font-size: 14px; /* Font size */
+    cursor: pointer; /* Add pointer cursor on hover */
+    border-radius: 5px; /* Slightly rounded corners */
+    transition: background-color 0.3s ease; /* Smooth color transition */
+}
+
+.scan-btn:hover {
+    background-color: #fffd00; /* Hover color */
+    color: black; /* Change text color on hover */
+}	
+
+
+</style>
+
+
+
+<!-- flexisel -->
+<script type="text/javascript">
+	$(window).load(function() {
+		$("#flexiselDemo1").flexisel({
+			visibleItems: 3,
+			animationSpeed: 1000,
+			autoPlay: false,
+			autoPlaySpeed: 3000,    		
+			pauseOnHover: true,
+			enableResponsiveBreakpoints: true,
+			responsiveBreakpoints: { 
+				portrait: { 
+					changePoint:480,
+					visibleItems: 1
+				}, 
+				landscape: { 
+					changePoint:640,
+					visibleItems:2
+				},
+				tablet: { 
+					changePoint:768,
+					visibleItems: 2
+				}
+			}
+		});
+		
+	});
+</script>
+<script type="text/javascript" src="js/jquery.flexisel.js"></script>
+<!-- //flexisel -->
+<!-- start-smooth-scrolling -->
+<script type="text/javascript" src="js/move-top.js"></script>
+<script type="text/javascript" src="js/easing.js"></script>
+<script type="text/javascript">
+jQuery(document).ready(function($) {
+$(".scroll").click(function(event){		
+	event.preventDefault();
+	$('html,body').animate({scrollTop:$(this.hash).offset().top},1000);
+});
+});
+</script>
+<!-- start-smooth-scrolling -->
+<!-- for bootstrap working -->
+<script src="js/bootstrap.js"></script>
+<!-- //for bootstrap working -->
+<!-- here stars scrolling icon -->
+<script type="text/javascript">
+$(document).ready(function() {
+	/*
+		var defaults = {
+		containerID: 'toTop', // fading element id
+		containerHoverID: 'toTopHover', // fading element hover id
+		scrollSpeed: 1200,
+		easingType: 'linear' 
+		};
+	*/
+						
+	$().UItoTop({ easingType: 'easeOutQuart' });
+						
+	});
+</script>
+
+
+
+
+<script src="{% static 'assesment/assess_scan/js/jquery.min.js' %}"></script>
+<script src="{% static 'assesment/assess_scan/js/popper.js' %}"></script>
+<script src="{% static 'assesment/assess_scan/js/bootstrap.min.js' %}"></script>
+<script src="{% static 'assesment/assess_scan/js/main.js' %}"></script>
+
+	</body>
+</html>
+
