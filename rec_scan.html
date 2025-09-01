@@ -1,0 +1,285 @@
+<!doctype html>
+{% load static %}
+<html lang="en">
+
+  <head>
+
+
+	<base href="/static/reclamation/rec_homepage/">
+
+	<title>reclamation scanning</title>
+	<!--meta tags -->
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="keywords" content="Billiards Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template, 
+Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyEricsson, Motorola web design" />
+	<script>
+		addEventListener("load", function () {
+			setTimeout(hideURLbar, 0);
+		}, false);
+
+		function hideURLbar() {
+			window.scrollTo(0, 1);
+		}
+	</script>
+	<!--//meta tags ends here-->
+	<!--booststrap-->
+	<link href="css/bootstrap.css" rel="stylesheet" type="text/css" media="all">
+	<!--//booststrap end-->
+	<!-- font-awesome icons -->
+	<link href="css/font-awesome.css" rel="stylesheet">
+	<!-- //font-awesome icons -->
+	<link rel="stylesheet" href="css/flexslider.css" type="text/css" media="all" />
+<!-- Nav-CSS -->	
+<link href="css/nav.css" rel="stylesheet" type="text/css" media="all" />
+ <script src="js/modernizr.custom.js"></script>
+<!-- //Nav-CSS -->	
+	<!--stylesheets-->
+	<link href="css/style.css" rel='stylesheet' type='text/css' media="all">
+	<!--//stylesheets-->
+	<link href="//fonts.googleapis.com/css?family=Lato:300,400,700,900" rel="stylesheet">
+	<link href="//fonts.googleapis.com/css?family=PT+Serif:400,700" rel="stylesheet">
+
+
+
+	
+  	<title>solvo_report</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+	<link href='https://fonts.googleapis.com/css?family=Roboto:400,100,300,700' rel='stylesheet' type='text/css'>
+
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+	
+	<link rel="stylesheet" href="{% static 'reclamation/rec_scan/css/style.css' %}">
+
+	</head>
+
+	<body>
+		<script>
+			{% for msg in messages %}
+				alert('{{ msg }}')
+			{% endfor %}
+		</script>
+
+
+<!-- navigation section -->
+<div class="header-outs">
+	<div class="header-w3layouts">
+	<div class="container">
+
+<div class="right-side"> 
+<p>
+	<button id="trigger-overlay" type="button">
+		<span class="fa fa-bars" aria-hidden="true"></span>
+	</button>
+	</p>
+</div>
+<!-- open/close -->
+<div class="overlay overlay-hugeinc">
+	<button type="button" class="overlay-close">Close</button>
+	<nav>
+		<ul>
+			<li><a href="/rec_home/">HOME</a></li>
+			<li><a href="/solvo_final_report/">SOLVO REPORT</a></li>
+			<li><a href="/rec_scan/">REC SCAN</a></li>
+			<li><a href="/rec_file/">REC FILE</a></li>
+			<li><a href="/rec_logout/">LOGOUT</a></li>				
+		</ul>
+	</nav>
+</div>
+			<div class="hedder-logo">
+		<h1><a href="/rec_home/" style="font-family: 'PT Serif', serif;">RECLAMATION</a></h1>
+</div>
+<!-- /open/close -->
+<!-- /navigation section -->
+</div>
+<div class="clearfix"> </div>
+
+</div>
+<!-- Slideshow 4 -->
+	<div class="slider">
+		<div class="callbacks_container">
+			<ul class="rslides" id="slider4">
+				<li>
+					<div class="slider-img">
+						<div class="container">
+							<div class="slider-info">
+								<section class="ftco-section">
+									<div class="container">
+										<div class="row justify-content-center">
+											<div class="col-md-6 text-center mb-5" style="margin-top:-300px;">
+												<h2 class="heading-section" style="color:white;font-family: 'PT Serif', serif;">RECLAMATION SCANNING</h2>
+											</div>
+										</div>
+										<div class="row" style="margin-top:-200px;">
+											<div class="col-md-12">
+												<div class="table-wrap">
+													<table class="table">
+													  <thead class="thead-primary">
+														<th style="text-align:center;">PROJECT ID</th>
+													  <th style="text-align:center;">MEASUREMENT OF CUT PIECES (Cm)</th>
+													  <th style="text-align:center;">NO OF CUT PIECES</th>
+													  <th style="text-align:center;">METHANOLYSIS HEATING TIME(Hours)</th>
+													  <th style="text-align:center;">METHANOLYSIS HEATING TEMPERATURE(Fahrenheit)</th>
+														<th style="text-align:center;">ACTION</th>
+																				</tr>
+																			  </thead>
+																			  <tbody>
+																				{% for item in data %}
+																					<tr>
+																						<td style="text-align:center;">{{ item.project_id }}</td>
+																						<td style="text-align:center;">{{ item.measurement_of_cut_pieces }}</td>
+																						<td style="text-align:center;">{{ item.no_of_cut_pieces }}</td>
+																						<td style="text-align:center;">{{ item.methanolysis_heating_time }}</td>
+																						<td style="text-align:center;">{{ item.methanolysis_heating_temp }}</td>
+																						
+																						<td>
+																							{% if item.rec_scanned %}
+																								<p style="color:#efb14f;margin-top:-20px;font-size:15px"><strong>SCANNED</strong></p>
+																							{% else %}
+																								<a href="/rec_calculation/{{ item.project_id }}/">
+																									<button class="scan-button" >SCAN</button>
+																								</a>
+																							{% endif %}
+																						</td>
+																					</tr>
+																					{% endfor %}							
+													  </tbody>
+													</table>
+												</div>
+											</div>
+										</div>
+									</div>
+								</section>	
+			</ul>
+		</div>
+		<div class="clearfix"> </div>
+	</div>
+	<!-- This is here just to demonstrate the callbacks -->
+	<!-- <ul class="events">
+  <li>Example 4 callback events</li>
+</ul>-->
+</div>
+<!-- //banner -->
+<style>
+.scan-button {
+    background-color: #efb14f; /* Button background color */
+    color: black;              /* Text color */
+    border: none;             /* Remove default border */
+    padding: 5px 8px;       /* Add some padding */
+    cursor: pointer;          /* Change cursor to pointer on hover */
+    border-radius: 5px;      /* Optional: rounded corners */
+    font-size: 16px;          /* Optional: increase font size */
+}
+
+.scan-button:hover {
+    background-color: #efb14f; /* Same color on hover */
+    color: black;              /* Maintain text color on hover */
+}
+</style>
+
+
+
+
+	
+
+	  <!--js working-->
+	  <script src='js/jquery-2.2.3.min.js'></script>
+	  <script src="js/bootstrap.js"></script>
+	  <!--//js working-->
+	  <!--nav menu-->
+		  <script src="js/classie.js"></script>
+		  <script src="js/demo1.js"></script>
+  <!-- //nav menu-->	
+  <!--banner-->
+  
+	  <script src="js/responsiveslides.min.js"></script>
+  
+	  <script>
+		  // You can also use "$(window).load(function() {"
+		  $(function () {
+			  // Slideshow 4
+			  $("#slider4").responsiveSlides({
+				  auto: true,
+				  pager: false,
+				  nav: true,
+				  speed: 900,
+				  namespace: "callbacks",
+				  before: function () {
+					  $('.events').append("<li>before event fired.</li>");
+				  },
+				  after: function () {
+					  $('.events').append("<li>after event fired.</li>");
+				  }
+			  });
+  
+		  });
+	  </script>
+	  <!--// banner-->
+  
+  <!-- start-smoth-scrolling -->
+	  <script src="js/move-top.js"></script>
+	  <script src="js/easing.js"></script>
+	  <script>
+		  jQuery(document).ready(function ($) {
+			  $(".scroll").click(function (event) {
+				  event.preventDefault();
+				  $('html,body').animate({
+					  scrollTop: $(this.hash).offset().top
+				  }, 900);
+			  });
+		  });
+	  </script>
+	  <!-- start-smoth-scrolling -->
+	  <!-- here stars scrolling icon -->
+	  <script>
+		  $(document).ready(function () {
+  
+			  var defaults = {
+				  containerID: 'toTop', // fading element id
+				  containerHoverID: 'toTopHover', // fading element hover id
+				  scrollSpeed: 1200,
+				  easingType: 'linear'
+			  };
+  
+  
+			  $().UItoTop({
+				  easingType: 'easeOutQuart'
+			  });
+  
+		  });
+	  </script>
+	  <!-- //here ends scrolling icon -->
+		  <!-- stats -->
+	  <script src="js/jquery.waypoints.min.js"></script>
+	  <script src="js/jquery.countup.js"></script>
+	  <script>
+		  $('.counter-agileits-w3layouts').countUp();
+	  </script>
+	  <!-- //stats -->
+  <!-- FlexSlider-JavaScript -->
+	  <script defer src="js/jquery.flexslider.js"></script>
+	  <script type="text/javascript">
+		  $(function(){
+			  SyntaxHighlighter.all();
+				  });
+				  $(window).load(function(){
+				  $('.flexslider').flexslider({
+					  animation: "slide",
+					  start: function(slider){
+						  $('body').removeClass('loading');
+					  }
+			  });
+		  });
+	  </script>
+  <!-- //FlexSlider-JavaScript -->
+
+	<script src="{% static 'reclamation/rec_report/js/jquery.min.js' %}"></script>
+  <script src="{% static 'reclamation/rec_report/js/popper.js' %}"></script>
+  <script src="{% static 'reclamation/rec_report/js/bootstrap.min.js' %}"></script>
+  <script src="{% static 'reclamation/rec_report/js/main.js' %}"></script>
+
+	</body>
+</html>
+
